@@ -1,0 +1,95 @@
+\documentclass{article}
+%\usepackage{fullpage}
+%\usepackage[top=1in, bottom=1in, left=1cm,right=1cm]{geometry}
+\usepackage[top=.75in, bottom=.75in, left=.75in,right=.75in]{geometry}
+\usepackage{fancyhdr}
+\usepackage{color}
+\usepackage[colorlinks,urlcolor={blue}]{hyperref}
+
+\begin{document}
+
+%\fancyfoot[L]{Revision 1.0 -- 12/07/2011}
+\pagestyle{fancyplain}
+
+
+\title{\textbf{Programming Mini-Assignment: Linked Lists}}
+\author{Assigned: Monday, September 14, 1:30PM}
+\date{\textbf{\color{red}{Due: Monday, September 21, 1:30PM (Hard Deadline)}}}
+\maketitle
+
+The purpose of this assignment is to act as a quick refresher on how to work
+with simple linked lists. This assignment is primarily for your benefit as
+you'll need these concepts later in the semester. It should not take more than
+an hour at the most.
+
+
+\section*{Grading}
+
+\begin{itemize}
+  \item 20 points -- Everything works.
+  \item 10 points -- You put effort in but it doesn't quite work.
+  \item 0 points -- Little to no effort / nothing works / nothing submitted.
+\end{itemize}
+
+\noindent
+\textit{Honor Code Reminder:} In the interest of making this easy for you to
+implement, test, and submit this is probably one of the easiest assignments to
+cheat on ever. Please don't. Resist the temptation to ``glance'' at another
+solution for help because you got stuck. My solution is only about 30~lines
+long. There just isn't enough code that a ``glance'' will do anything but give
+you the solution. This assignment is deliberately worth very few points; if
+you didn't do it, just don't submit anything [why risk cheating?]. The point
+of this assignment is to make your life easier later this semester, don't
+cheat yourself.
+
+
+\section*{Assignment: Implement basic linked list functionality}
+
+Grab a copy of the code from
+\url{http://github.com/eecs373-f15/373-f15-linked-list}. I recommend forking
+this repository to do your work.
+
+\medskip
+\noindent
+You need to implement the two stub functions, \texttt{insert\_sorted} and
+\texttt{reverse}, in \texttt{list.c}. You should only need to edit
+\texttt{list.c}. Do not edit any other files.
+
+\medskip
+\noindent
+Typing \texttt{make} will build a simple program that uses your linked list,
+runs it, and checks the output.
+
+\medskip
+\noindent
+If you are working on a mac, you will need the checkout the mac branch so that
+you can use the pre-compiled object files (\texttt{git checkout mac}).
+
+\medskip
+\noindent
+I have tested this on my (Linux) desktop, the CAEN Linux machines, and my
+personal mac. If you have any issues building / running the initial code,
+please file an issue on GitHub (the ``Issues'' button at the right side of the
+page).
+
+
+\section*{Submission}
+
+Your \texttt{list.c} implementation will be automatically graded. To submit,
+go to \url{https://docs.google.com/spreadsheets/d/18F8ICthJunY5VFhktLD6Rgyquf8mcMl-8s80Vr1LNvQ/edit?usp=sharing}
+and add your uniqname and a link to download your \texttt{list.c}. If you
+forked the original repository, this is very easy. Click on the
+\texttt{list.c} file in your GitHub and then click on the ``Raw'' button. For
+example, this is a direct link to download the template \texttt{list.c}:
+\url{https://raw.githubusercontent.com/eecs373-f15/373-f15-linked-list/master/list.c}
+
+\medskip
+\noindent
+A script will automatically download, compile, and grade your \texttt{list.c}
+implementation. This script will run automatically at 1:35PM on Monday,
+September 21st (to account for clock differences, don't rely on this).
+\textbf{\color{red}No late submissions will be accepted.}
+A test run of the script will run at 1:35PM on Sunday, September 20th. In both
+cases, the script will immediately email the results.
+
+\end{document}
