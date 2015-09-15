@@ -14,7 +14,7 @@ except ImportError:
 	from email.MIMEBase import MIMEBase
 
 import sh
-from sh import wget, git, rm, make, cp, diff
+from sh import wget, git, rm, make, cp, diff, ln
 
 # n.b. newer sh will support this directly when released
 class pushd(object):
@@ -135,7 +135,9 @@ enough to be considered a lot of effort.</p>
 def grade(uniqname, link):
 	print("Grading {}".format(uniqname))
 	with pushd('373-f15-linked-list'):
-		wget(link, '-O', 'list.c')
+		wget(link, '-O', '{}.c'.format(uniqname))
+		rm('-f', 'list.c', 'list.o', 'list')
+		ln('-s', '{}.c'.format(uniqname), 'list.c')
 		make('run')
 		try:
 			diff('list.out', 'golden.out')
